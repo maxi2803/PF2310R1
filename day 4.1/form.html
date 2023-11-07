@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    p {
+        margin-bottom: 0;
+    }
+    button {
+        margin-top: 15px;
+    }
+</style>
 <body>
-    <form method="get" action="simpleform.html">
-        <p>Họ và Tên</p>
+<p>Họ và Tên</p>
 <input type = "text" name="name" size="10"/>
 <p>Email</p>
 <input type = "text" name="email" size="10"/>
 <p>Phone</p>
 <input type = "text" name="phone" size="10"/>
 <p>Giới tính</p>
-<input type="radio" name="rd"/> 1 - Nam <br/>
-<input type="radio" name="rd"/> 2 - Nữ <br/>
-</select>
-    </form>
+<input type="radio" name="gioitinh" checked/>  Nam
+<input type="radio" name="gioitinh"/>  Nữ
+<br>
+<button>Đăng ký</button>
 </body>
 </html>
