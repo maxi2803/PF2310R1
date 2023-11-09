@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        background-color: #FFFDA9;
+    }
+    p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        background-color: #D4FDD6;
+    }
+    .blue {
+        color:  #0E29AA;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <td class="blue" colspan="3"><p>ĐĂNG KÝ HỌC VIÊN</p></td>
+        </tr>
+        <tr>
+            <TD class="blue">Họ và tên</TD>
+            <TD colspan="2"><input type="text" size="30px"></TD>
+        </tr>
+        <tr>
+            <td class="blue">Ngày sinh</td>
+            <td colspan="2"><input type="text" size="11px"></td>
+        </tr>
+        <tr>
+            <td class="blue">Giới tính</td>
+            <td colspan="2">
+                <input type="radio"> Nam
+                <input type="radio"> Nữ
+            </td>
+        </tr>
+        <tr>
+            <td class="blue" rowspan="2">Địa chỉ</td>
+            <td colspan="2"><input type="text" style="height: 50px;" size="25px"></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td class="blue">Lớp</td>
+            <td>
+                <select id="chonlop" name="chonlop">
+                    <option value="-Chọn lớp-">-Chọn lớp-</option>
+                  </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="blue">Email</td>
+            <td colspan="2"><input type="text" size="15px"></td>
+        </tr>
+        <tr>
+            <td class="blue">Điện thoại</td>
+            <td colspan="2"><input type="text" size="15px"></td>
+        </tr>
+        <tr>
+            <td colspan="1"></td>
+            <td><button>Đăng ký</button>
+            <button type="reset">Nhập lại</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
