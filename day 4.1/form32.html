@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng không hề dễ</title>
+</head>
+<style>
+    table {
+        background-color: #FFFDA9;
+    }
+    .blue {
+        color: #0433FF;
+    }
+    #xanh {
+        background-color: #D4FDD6;
+
+    }
+    td {
+        min-width: 50px;
+    }
+    input {
+        border-bottom: #6B6B6B;
+        border-right: #6B6B6B;
+    }
+</style>
+<body>
+    <form>
+    <table>
+        <tr>
+            <td id="xanh" colspan="4" class="blue"><b>ĐĂNG KÝ HỌC VIÊN</b></td>
+        </tr>
+        <tr>
+            <td>Họ và tên</td>
+            <td colspan="3"><input type="text" size="25px"></td>
+        </tr>
+        <tr>
+            <td>Ngày sinh</td>
+            <td colspan="2"><input type="text" size="12px"></td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td colspan="2">
+                <input type="radio"> Nam
+                <input type="radio"> Nữ
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">Địa chỉ</td>
+            <td colspan="2"><textarea name="diachi" id="" cols="25" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td>Lớp</td>
+            <td colspan="2">
+                <select style="width: 120px;" name="lop">
+                    <option value="Chọn lớp">-Chọn lớp-</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td colspan="2"><input type="email" size="15px"></td>
+        </tr>
+        <tr>
+            <td>Điện thoại</td>
+            <td colspan="2"><input type="tel" size="15px"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">
+                <button>Đăng ký</button>
+                <button type="reset">Nhập lại</button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+ </form>
+</html>
