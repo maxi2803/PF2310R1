@@ -6,22 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Số tiền vay</h2>
-    <input type="text" id="vay">
-    <h2>Lãi suất</h2>
-    <input type="text" id="lai">
-    <h2>Số năm</h2>
-    <input type="text" id="nam">
-    <button onclick="m1()">Tính lãi</button>
-
+    <button onclick="m1()">Tính chu vi hình tròn</button>
+    <h2 id="result"></h2>
 </body>
 <script>
     function m1() {
-        let a = +document.getElementById('vay').value
-        let b = +document.getElementById('lai').value
-        let c = +document.getElementById('nam').value
-        let d = ((a * b/100) * c) + a
-        alert(d)
+        let radius = +prompt("Nhập bán kính hình tròn ở đây: ")
+        let C = radius * radius * Math.PI
+        let S = 2 * radius * Math.PI
+        document.getElementById("result").innerHTML = "Chu vi hình tròn là: " + C.toFixed(3) +
+                                                    "<br>Diện tích hình tròn là: " + S.toFixed(3)
     }
 </script>
 </html>
