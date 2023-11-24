@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="biggest"></h3>
+</body>
+    <script>
+        let number1 = +prompt("Nhập số thứ 1: ")
+        let number2 = +prompt("Nhập số thứ 2: ")
+        let number3 = +prompt("Nhập số thứ 3: ")
+        if (number1 > number2){
+            if(number1 > number3) {
+                document.getElementById("biggest").innerText = "Số lớn nhất là: " + number1
+            }
+            else {
+                document.getElementById("biggest").innerText = "Số lớn nhất là: " + number3
+            }
+        }
+        else{
+            if(number2 > number3){
+                document.getElementById("biggest").innerText = "Số lớn nhất là: " + number2
+            }
+            else {
+                document.getElementById("biggest").innerText = "Số lớn nhất là: " + number3
+            }
+        }
+
+    </script>
+</html>
