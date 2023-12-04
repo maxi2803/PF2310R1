@@ -28,7 +28,7 @@
                 interest = 0.0965
             }
             let normalinterest = money * interest * month
-            let doubleinterest = money * Math.pow(1 + interestRate, month) - money
+            let doubleinterest = money * Math.pow(1 + interest, month) - money
             document.getElementById("laithuong").innerText = "Lãi bình thường là: " + normalinterest
             document.getElementById("laikep").innerText = "Lãi kép là: " + doubleinterest
         }
