@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập 3</title>
+</head>
+<body>
+    <button onclick="b3()">Bai 3</button>
+    <p id="ketqua3"></p>
+    <p id="kq345"></p>
+</body>
+<script>
+    function b3() {
+        let num1 = 1
+        let num2 = 1
+        let count = 0
+        let sum = 0
+        while(count < 100) {
+            console.log(num1);
+            sum += num1
+            let temp = num2
+            num2 = num1 + num2
+            num1 = temp
+            count++
+        }
+    }
+</script>
+</html>

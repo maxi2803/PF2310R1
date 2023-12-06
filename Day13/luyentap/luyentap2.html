@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập 2</title>
+</head>
+<body>
+    <button onclick="b2()">Bai 2</button>
+</body>
+<script>
+    function b2() {
+        let temparature 
+        do {
+            temparature = +prompt("Nhập nhiệt độ: ")
+            if (temparature > 100) {
+                alert("Giảm nhiệt độ")
+            } else if (temparature < 20) {
+                alert("Tăng nhiệt độ")
+            } else {
+                alert("Nhiệt độ là: " + temparature)
+            }
+        } while (temparature < 20 || temparature > 100)
+    }
+</script>
+</html>
