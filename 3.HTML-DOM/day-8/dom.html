@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="test">
+    <p id="demo">Việt Nam</p>
+</body>
+<script>
+    // thêm thành phần HTML
+    // phương thức createElement() dùng để tạo ra 1 thẻ (thành phần) HTML tương ứng
+    let e = document.createElement("button")
+    // dùng thành phần đó để thêm các thuộc tính cho nó
+    e.innerHTML = "Clickme"
+    // phương thức append() sẽ thêm thành phần HTML đó vào trong trang HTML
+    document.body.append(e)
+    // let demo = document.getElementById("test")
+    // demo.append(e)
+
+    // // xóa thành phần HTML
+    // let p = document.getElementById("demo")
+    // // thẻ p được coi là con của thẻ body
+    // let body = document.getElementById("test")
+    // // thẻ body được gọi là thẻ cha của thẻ p
+    // // phương thức removeChild() dùng để xóa thành phần con ra khỏi thành phần cha
+    // body.removeChild(p)
+
+    // document.getElementById("demo").style.display = "none"
+
+    document.getElementById("demo").style.color = "red"
+
+    function a() {
+        alert("Hello")
+    }
+    document.getElementById("demo").setAttribute("onclick", "a()")
+
+</script>
+</html>

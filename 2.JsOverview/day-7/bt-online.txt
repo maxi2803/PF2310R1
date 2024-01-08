@@ -1,0 +1,15 @@
+1. Sử dụng HTML để vẽ 1 CV cá nhân bao gồm 1 số thông tin cơ bản như sau:
+	- Ảnh (có thể dùng ảnh bất kỳ): bo tròn, có viền
+	- Tên: viết hoa, chữ to, màu đỏ
+	- Tuổi
+	- Giới tính
+	- Sở thích: danh sách không thứ tự
+Tất cả thông tin căn giữa trang HTML. Có thể bổ sung CSS tùy ý
+
+2. Tạo input nhập vào 1 số. In ra màn hình các kết quả:
+	- Căn bậc 2 của số đó
+	- Bình phương số đó
+	- Lũy thừa với số mũ là chính số đó (tức là cơ số và số mũ bằng nhau)
+
+3. Tạo input nhập vào tên của mình. Sau đó hiển thị ra màn hình thông tin gồm: tên vừa nhập + dấu gạch ngang + tên lớp mình.
+Các chữ hiển thị có màu bất kỳ, trừ màu đen mặc định.

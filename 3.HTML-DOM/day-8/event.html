@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m1()">Click</button>
+    <input type="text" onchange="m2()" id="str1">
+    <p id="change"></p>
+    <input type="text" oninput="m3()" id="str2">
+    <p id="input"></p>
+    <h2 id="over" onmouseover="m4()" style="width: 200px;">HelloWorld</h2>
+    <h2 id="out" onmouseout="m5()" style="font-size: 10px; width: 200px;">Lập trình</h2>
+</body>
+<script>
+    function m1() {
+        alert("CodeGym")
+    }
+    
+    function m2() {
+        let string = document.getElementById("str1").value
+        document.getElementById("change").innerHTML = string
+    }
+
+    function m3() {
+        let string = document.getElementById("str2").value
+        document.getElementById("input").innerHTML = string
+    }
+
+    function m4() {
+        document.getElementById("over").style.color = "red"
+    }
+
+    function m5() {
+        let size = parseInt(document.getElementById("out").style.fontSize)
+        document.getElementById("out").style.fontSize = (size + 2) + "px"
+    }
+</script>
+</html>

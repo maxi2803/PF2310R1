@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // for bình thường
+    for (let i = 0; i < 10 ; i++) {
+        console.log(i);
+    }
+    console.log("--------------------");
+
+    // for thiếu
+    // thiếu phần khởi tạo, phần này được viết trước for
+    let i = 0
+    for ( ; i < 10 ; i++) {
+        console.log(i);
+    }
+    console.log("--------------------");
+
+    // thiếu phần tăng bước lặp, phần này được viết trong khối lệnh thực thi
+    for (let j = 0 ; j < 5 ; ) {
+        console.log("Before: " + j);
+        j++
+        console.log("After: " + j);
+    }
+</script>
+</html>

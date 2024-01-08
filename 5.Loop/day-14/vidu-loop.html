@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // // yêu cầu in ra 10 số tự nhiên từ 10 -> 20
+    // // phân tích: các số cần in: 10, 11, 12, ... , 20
+    // // điều kiện > 10 và < 20 
+    // // => điều kiện là > 10; có bắt đầu vòng lặp từ 20 và giảm dần các bước từ 20 về 10
+    // // => điều kiện là < 20; có bắt đầu vòng lặp từ 10 và tăng dần các bước từ 10 đến 20
+    // // đặt được bước lặp từ 0 => 9 -> trong phần thân sẽ là giá trị của bước lặp + thêm 10
+
+    // for (let i = 100; i < 110 && true; i++) {
+    //     console.log(i - 90);
+    // }
+    // console.log("------------------");
+    // for (let i = 10; i < 20; i++) {
+    //     console.log(i);
+    // }
+    // console.log("------------------");
+    // for (let i = 0; i < 10; i++) {
+    //     console.log(i + 10);
+    // }
+    // console.log("------------------");
+    // for (let i = 19; i >= 10; i--) {
+    //     console.log(i);
+    // }
+
+
+    // // thay thế for - while
+    let str = ""
+    while(true) {
+        str = prompt("Nhập")
+        if (str === "q") {
+            break
+        }
+        console.log(str)
+    }
+
+    let str1 = ""
+    for(;true;) {
+        str = prompt("Nhập")
+        if (str === "q") {
+            break
+        }
+        console.log(str)
+    }
+
+    for(let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+
+    let i = 0
+    while(i < 5) {
+        console.log(i);
+        i++
+    }
+</script>
+</html>

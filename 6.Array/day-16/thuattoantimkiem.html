@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // tìm kiếm là hành động tìm 1 giá trị mong muốn theo yêu cầu
+    // thường xảy ra khi tìm kiếm giá trị trong dãy số, trong mảng
+
+    // thuật toán tìm kiếm chia thành 2 dạng cơ bản:
+    // tìm kiếm tuyến tính: lần lượt duyệt qua các phần tử của mảng để tìm
+    // tìm kiếm nhị phân: chỉ thực hiện tìm kiếm được nếu mảng đó đã được sắp xếp
+    // tốc độ của tk nhị phân cao hơn rất nhiều lần tuyến tính
+    // nguyên lý nhị phân: tất cả mọi thứ chia 2
+
+    let arr1 = [1,2,3,4,5,6,7,8,9,10]
+
+    // tuyến tính
+    for(let i = 0; i < arr1.length; i++) {
+        console.log(arr1[i])
+        if (arr1[i] === 8) {
+            break
+        }
+    }
+    console.log("-------");
+
+    // nhị phân
+    let arr = [1,2,3,4,5,6,7,8,9,10]
+    let min = 0
+    let max = arr.length - 1
+    let mid = parseInt((max + min) / 2)
+    let number = arr[mid]
+    while(number !== 8) {
+        if (number < 8) {
+            min = mid
+            mid = parseInt((max + min) / 2 + 1)
+            number = arr[mid]
+        } else if (number > 8) {
+            max = mid
+            mid = parseInt((max + min) / 2 + 1)
+            number = arr[mid]
+        }
+        console.log(number);
+    }
+</script>
+</html>

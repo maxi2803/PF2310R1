@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // - không tham số, không giá trị trả về
+    function m1() {
+        console.log("HelloWorld1")
+    }
+	// - không tham số, có giá trị trả về
+    function m2() {
+        return "HelloWorld2"
+    }
+	// - có tham số, không giá trị trả về
+    function m3(text) {
+        console.log(text)
+    }
+	// - có tham số, có giá trị trả về
+    function m4(text) {
+        return text
+    }
+
+    // lời gọi hàm: sử dụng tên hàm và truyền đối số tương ứng nếu có
+    m1()
+
+    let value1 = m2()
+    console.log(value1)
+
+    // trong đó, text là tham số của hàm còn "HelloWorld" là đối số khi gọi hàm
+    m3("HelloWorld3")
+
+    let value2 = m4("HelloWorld4")
+    console.log(value2)
+</script>
+</html>

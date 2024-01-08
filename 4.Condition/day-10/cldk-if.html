@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // // if đơn
+    // let number = 5
+    // if (number > 7) {
+    //     alert("5 lớn hơn 3")
+    // }
+
+    // // if else
+    // let number1 = +prompt("Nhập 1 số: ")
+    // let number2 = +prompt("Nhập 1 số khác: ")
+    // if (number1 > number2) {
+    //     alert(number1 + " lớn hơn " + number2)
+    // } else {
+    //     alert(number1 + " nhỏ hơn " + number2)
+    // }
+
+    // if... else if
+    let number3 = +prompt("Nhập số bất kỳ: ")
+    if (number3 > 5) {
+        alert(number3 + " lớn hơn 5")
+    } else if (number3 > 0) {
+        alert(number3 + " lớn hơn 0 và nhỏ hơn 5")
+    } else {
+        alert(number3 + " nhỏ hơn 5 và nhỏ hơn 0")
+    }
+
+    // if lồng nhau
+    let number4 = +prompt("Nhập số bất kỳ: ")
+    if (number4 > 5) {
+        if (number4 > 10) {
+            alert(number4 + " lớn hơn 10")
+        } else {
+            alert(number4 + " lớn hơn 5 và nhỏ hơn 10")
+        }
+    } else {
+        alert(number4 + " nhỏ hơn 5 và nhỏ hơn 10")
+    }
+</script>
+</html>

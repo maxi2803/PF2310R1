@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let number1 = +prompt("Nhập số bất kỳ: ")
+    let number2 = +prompt("Nhập số bất kỳ: ")
+    let sum = 0
+    if (number1 > number2) {
+        for (let i = number2; i <= number1; i++) {
+            sum += i
+        }
+    } else if (number1 < number2) {
+        for (let i = number1; i <= number2; i++) {
+            sum += i
+        }
+    } else {
+        sum = number1
+    }
+    alert("Tổng là: " + sum)
+</script>
+</html>

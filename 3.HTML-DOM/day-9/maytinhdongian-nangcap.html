@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <br><br>
+    <!-- từ khóa this: dùng để chỉ định đến phần tử HTML đang đứng  -->
+    <!-- this.value trong khi dùng hàm tức là đang truyền value của button vê js thông qua hàm  -->
+    <button value="+" onclick="calculator(this.value)">Addition(+)</button>
+    <button value="-" onclick="calculator(this.value)">Subtraction(-)</button>
+    <button value="*" onclick="calculator(this.value)">Multiplication(x)</button>
+    <button value="/" onclick="calculator(this.value)">Division(/)</button>
+    <br><br>
+    <p id="result"></p>
+</body>
+<script>
+    // value ở phần ngoặc tròn: được gọi là tham số của hàm, 
+    // nhằm đón các giá trị gửi đến hàm và sử dụng trong hàm
+    function calculator(value) { 
+        let number1 = document.getElementById("input1").value 
+        let number2 = document.getElementById("input2").value 
+        let str = number1 + value + number2
+        // hàm eval: là hàm sẽ tính toán ra kết quả theo string truyền vào
+        // với điều kiện string này có cấu trúc của 1 biểu thức
+        // vd: "10+5" , "10%2"
+        document.getElementById("result").innerHTML = "Result Addition: " + eval(str)
+    }
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m1()">Click</button>
+</body>
+<script>
+// Đề bài: Viết chương trình, tạo 1 mảng 1 chiều có 10 phần tử là số, các phần từ được nhập từ bàn phím.
+// Xác định trong các số nhập vào, số nào là số nguyên tố thì in ra màn hình.
+function m1() {
+    // tạo mảng từ bàn phím
+    // b1: tạo biến mảng có 10 phần tử
+    let arr = new Array(10)
+    // b2: duyệt mảng
+    for(let i = 0; i < arr.length; i++) {
+        // b3: nhập vào từng phần tử của mảng
+        arr[i] = +prompt("Nhập vào số bất kỳ: ")
+    }
+    console.log(arr);
+    // snt: là số chia hết cho 1 và chính nó (n). chia từ 2 => n-1
+    // nếu chia hết thì không là SNT, nếu không chia hết thì là SNT
+    // b4: duyệt mảng lần 2 để tìm SNT
+    for(let i = 0; i < arr.length; i++) {
+        // check điều kiện xét SNT
+        if (arr[i] < 2) {
+            continue
+        } else {
+            // đặt biến xác định SNT
+            let flag = true
+            let j = 2
+            // vòng lặp để xác định SNT
+            while(j <= Math.sqrt(arr[i])) {
+                if (arr[i] % j == 0) {
+                    flag = false
+                    break
+                }
+                j++
+            }
+            // hiển thị SNT
+            if (flag) {
+                console.log("Vị trí trong mảng: " + i + " : giá trị: " + arr[i]);
+            }
+        }
+    }
+}
+</script>
+</html>

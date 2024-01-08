@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tính lãi ngân hàng</h1>
+    <table>
+        <tr>
+            <td><label for="money">Số tiền gửi</label></td>
+            <td><input type="text" id="money"></td>
+        </tr>
+        <tr>
+            <td><label for="month">Số tháng gửi</label></td>
+            <td><input type="text" id="month"></td>
+        </tr>
+        <tr>
+            <td><label for="interest">Mức lãi hằng năm</label></td>
+            <td><input type="text" id="interest"></td>
+        </tr>
+    </table>
+    <button onclick="tinhLai()">Tính toán</button>
+    <div id="result"></div>
+</body>
+<script>
+    function tinhLai() {
+        let money = document.getElementById("money").value 
+        let month = document.getElementById("month").value 
+        let interest = document.getElementById("interest").value 
+        // hàm isNaN(): dùng để kiểm tra định dạng số của 1 biến, is not a number
+        // nếu giá trị là chuỗi thì kết quả trả về là đúng
+        // nếu giá trị là số thì kết quả trả về là sai
+        if (!isNaN(money) && !isNaN(month) && !isNaN(interest)) {
+            money = +money
+            month = +month
+            interest = +interest
+
+            // // xác định mức lãi theo số tháng gửi
+            // let interest
+            // if (month < 12) {
+            //     interest = 0.065
+            // } else if (month < 24) {
+            //     interest = 0.08
+            // } else {
+            //     interest = 0.0965
+            // }
+
+            // // tính lãi theo lãi suất tháng
+            // let laiThuong = interest * money * month
+            // let tongThuong = money + laiThuong
+
+            // let tongKep
+            // let temp = money
+            // for (let i = 0; i < month; i++) {
+            //     let lai = money * interest
+            //     money += lai
+            //     tongKep = money
+            // }
+            // let laiKep = tongKep - temp
+
+            // tính lãi theo lãi suất tháng
+            let laiThuong = (interest / 100) * money
+            let tongThuong = money + laiThuong
+
+            let tongKep
+            let temp = money
+            for (let i = 0; i < month; i++) {
+                let lai = money * ((interest / 100) / 12)
+                money += lai
+                tongKep = money
+            }
+            let laiKep = tongKep - temp
+
+            document.getElementById("result").innerHTML = "<h3>Lãi thường là: " + laiThuong.toFixed(2) + "</h3>"
+            + "<h3>Tổng thường là: " + tongThuong.toFixed(2) + "</h3>"
+            + "<h3>Lãi kép là: " + laiKep.toFixed(2) + "</h3>"
+            + "<h3>Tổng kép là: " + tongKep.toFixed(2) + "</h3>"
+        } else {
+            alert("Bạn nhập sai định dạng rồi!")
+        }
+
+    }
+</script>
+</html>

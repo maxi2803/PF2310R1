@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- thẻ pre sẽ giúp giữ nguyên định dạng của đoạn text như khi vừa copy -->
+    <button onclick="display()" id="btn">Hiển thị</button>
+    <pre id="demo" style="display: none;">
+        <!-- thuộc tính display của CSS thể hiện trạng thái hiển thị của thẻ HTML  -->
+        <!-- giá trị none của display là không hiển thị  -->
+        <span id="name"></span> thương nhớ,
+        
+        Em không biết phải nói sao để anh hiểu rằng, em nhớ anh thật nhiều. Em yêu anh đến khi trái tim này tan thành nghìn mảnh. Tất cả
+        những gì em thương yêu, em khát khao và cần đến , chính là anh, mãi mãi về sau. Em chỉ muốn ở bên anh, và anh yêu hỡi, em sẽ trở 
+        thành người phụ nữ như anh mong muốn.
+        
+        Có phải em thật tệ hại, khai cữ nghĩ đến anh thật nhiều, thật lâu và nhất là mỗi khi đêm xuống? Em hứa sẽ cố gắng triệu triệu lần hơn
+        thế. Nhưng hơn tất cả, em chỉ mong một ngày nào đó, anh sẽ tự hào về em, như tự hào về vợ của anh, và mẹ của các con anh (ít nhất là 
+        2 nhé, em vừa mới quyết định đấy!). Em nhớ thật nhiều cảm giác mỗi đêm anh ôm em và ru em ngủ trong vòng ta. Đêm nay, em chỉ 
+        muốn được gần bên anh... và anh biết không, trái tim em đang đau đớn đến nhường nào.
+        
+        Anh yêu thương, đừng bao giờ rời xa em nữa nhé. Yêu anh rất nhiều. 
+        
+        <span id="address"></span>, <span id="date"></span>
+    </pre>
+</body>
+<script>
+    function display() {
+        let name = prompt("Nhập tên người nhận: ")
+        let address = prompt("Nhập địa chỉ nhận: ")
+        let date = prompt("Nhập thời gian nhận: ")
+        document.getElementById("name").innerHTML = name
+        document.getElementById("address").innerHTML = address
+        document.getElementById("date").innerHTML = date
+        document.getElementById("demo").style.display = "block"
+        document.getElementById("btn").style.display = "none"
+        // giá trị block là hiển thị thẻ HTML có id tương ứng 
+    }
+</script>
+</html>

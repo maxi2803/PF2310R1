@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // push - pop
+    let arr = [1,2,3]
+    console.log("phần tử bị cắt: " + arr.pop());
+    console.log(arr);
+    arr.push(100)
+    console.log(arr);
+    console.log("------------------------");
+    // unshift - shift
+    let arr1 = [1,2,3]
+    console.log("phần tử bị cắt: " + arr1.shift());
+    console.log(arr1);
+    arr1.unshift(100)
+    console.log(arr1);
+    console.log("------------------------");
+    // indexOf - lastIndexOf
+    let arr2 = [1,2,10,3,4,10,5,6,10,7]
+    console.log("vị trí đầu tiên: " + arr2.indexOf(10));
+    console.log("vị trí cuối cùng: " + arr2.lastIndexOf(10));
+    console.log("------------------------");
+    // join
+    let arr3 = [1,2,3,4]
+    console.log(arr3.join("")); //1234
+    console.log(arr3.join("-")); //1-2-3-4
+    console.log(arr3.join("!")); //1!2!3!4
+    console.log(arr3.join(",")); //1,2,3,4
+    console.log("------------------------");
+    // toString
+    let arr4 = [1,2,3,4]
+    console.log(arr4.toString()); //1,2,3,4
+    console.log("------------------------");
+    // reverse: thay đổi luôn giá trị gốc của mảng
+    let arr5 = [3,4,56,1,14]
+    console.log("before: " + arr5);
+    arr5.reverse()
+    console.log("after: " + arr5);
+    console.log("------------------------");
+    // concat: thay đổi giá trị gốc của mảng hay không, tuy thuộc ng dùng
+    let arr6 = [1,2,3]
+    let arr7 = [7,8,9]
+    console.log(arr6.concat(arr7));
+    console.log(arr6);
+    console.log(arr7);
+    let a = arr6.concat(arr7)
+    console.log(arr6);
+    console.log(a);
+    console.log("------------------------");
+    // slice: dùng để cắt 1 phần của mảng thành mảng mới
+    // không thay đổi cấu trúc mảng gốc
+    // tham số 1 chỉ định vị trí bắt đầu cắt
+    // tham số 2 chỉ định vị trí kết thúc cắt +1
+    let arr8 = [1,2,3,4,5,6,7,8]
+    let b = arr8.slice(2,6)
+    console.log(b);
+    console.log(arr8);
+    console.log("------------------------");
+    // splice: dùng để cắt 1 phần của mảng thành mảng mới
+    // thay đổi cấu trúc mảng gốc
+    // tham số 1 chỉ định vị trí bắt đầu cắt
+    // tham số 2 chỉ định số lượng phần tử sẽ cắt
+    // tham số 3 (nếu cần) thêm giá trị vào vị trí đã cắt
+    let arr9 = [1,2,3,4,5,6,7,8]
+    let arr10 = [1,2,3,4,5,6,7,8]
+    let c = arr9.splice(2,4)
+    console.log(c);
+    console.log(arr9);
+    console.log("-----------");
+    let d = arr10.splice(2,4,100,200)
+    console.log(d);
+    console.log(arr10);
+    console.log("------------------------");
+    // sort
+    let array = [1,5,3,11,7,2,8]
+    console.log(array);
+    // array.sort((a,b) => {return a - b})
+    // console.log(array);
+    array.sort((a,b) => {return b - a})
+    console.log(array);
+</script>
+</html>

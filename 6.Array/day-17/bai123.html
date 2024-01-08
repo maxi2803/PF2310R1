@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bai1()">Bai1</button>
+    <button onclick="bai2()">Bai2</button>
+    <button onclick="bai3()">Bai3</button>
+</body>
+<script>
+    //bai 1
+    function bai1() { 
+        let arr = ["Orange", "Banana", "Lemon", "Kiwi"]
+        //c1: toString()
+        console.log(arr.toString());
+        //c2: join()
+        console.log(arr.join(","))
+        //c3: dùng vòng lặp
+        let data = ""
+        for(let i = 0; i < arr.length; i++) {
+            if (i == arr.length - 1) {
+                data += arr[i]
+                break
+            }
+            data += arr[i] + ","
+        }
+        console.log(data);
+    }
+
+    //bai2
+    function bai2() {
+        let number = prompt("Nhập 1 số: ")
+        let arr = number.split("")
+        let newArr = []
+        for(let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0 && arr[i + 1] % 2 == 0) {
+                newArr.push(arr[i])
+                newArr.push("-")
+            } else {
+                newArr.push(arr[i])
+            }
+        }
+        console.log(newArr.join(""));
+    }
+
+    //bai3
+    function bai3() {
+        let str = prompt("Nhập 1 chuỗi: ")
+        console.log(str);
+        let arr = str.split("")
+        for (let i = 0 ; i < arr.length ; i++) {
+            // toUpperCase(): chuyển chuỗi về thành chữ viết hoa
+            // toLowerCase(): chuyển chuỗi về thành chữ viết thường
+            if (arr[i].toUpperCase() === arr[i]) {
+                arr[i] = arr[i].toLowerCase()
+            } else {
+                arr[i] = arr[i].toUpperCase()
+            }
+        }
+        console.log(arr.join(""));
+    }
+</script>
+</html>

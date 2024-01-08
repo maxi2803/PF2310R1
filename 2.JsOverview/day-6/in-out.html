@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m1()">Input1</button>
+    <input type="text" id="demo">
+    <button onclick="m2()">Input2</button>
+
+    <button onclick="m3()">Output1</button>
+    <button onclick="m4()">Output2</button>
+    <button onclick="m5()">Output3</button>
+    <button onclick="m6()">Output4</button>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+</body>
+<script>
+    // input
+    function m1() {
+        let a = prompt("Nhập gì đó: ")
+        console.log(a)
+    }
+
+    function m2() {
+        let a = document.getElementById("demo").value         
+        console.log(a)
+    }
+
+    //output
+    function m3() {
+        alert("HelloWorld")
+    }
+
+    function m4() {
+        console.log("HelloWorld")
+    }
+
+    function m5() {
+        document.write("HelloWorld")
+    }
+
+    function m6() {
+        document.getElementById("demo1").innerText = "<h1>PF2310R1</h1>"
+        document.getElementById("demo2").innerHTML = "<h1>PF2310R1</h1>"
+    }
+</script>
+</html>

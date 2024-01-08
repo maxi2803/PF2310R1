@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <br><br>
+    <button onclick="add()">Addition(+)</button>
+    <button onclick="sub()">Subtraction(-)</button>
+    <button onclick="multi()">Multiplication(x)</button>
+    <button onclick="division()">Division(/)</button>
+    <br><br>
+    <p id="result"></p>
+</body>
+<script>
+    function add() { 
+        let number1 = +document.getElementById("input1").value 
+        let number2 = +document.getElementById("input2").value 
+        document.getElementById("result").innerHTML = "Result Addition: " + (number1 + number2)
+    }
+
+    function sub() {
+        let number1 = +document.getElementById("input1").value 
+        let number2 = +document.getElementById("input2").value 
+        document.getElementById("result").innerHTML = "Result Subtraction: " + (number1 - number2)
+    }
+
+    function multi() {
+        let number1 = +document.getElementById("input1").value 
+        let number2 = +document.getElementById("input2").value 
+        document.getElementById("result").innerHTML = "Result Multiplication: " + (number1 * number2)
+    }
+
+    function division() {
+        let number1 = +document.getElementById("input1").value 
+        let number2 = +document.getElementById("input2").value 
+        document.getElementById("result").innerHTML = "Result Division: " + (number1 / number2)
+    }
+</script>
+</html>

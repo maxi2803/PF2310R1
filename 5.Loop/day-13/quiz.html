@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <div id="result"></div>
+</body>
+<script>
+    // bug: khái niệm lập trình, chỉ vè việc có lỗi xảy ra trong quá trình coding
+    // dẫn đến chương trình hoạt động không như mong muốn
+    // debug: khái niệm lập trình, chỉ về hành động của lập trình viên, sử dụng các công cụ hỗ trợ
+    // để tìm ra và xử lý phần bug nó trên
+
+    // lỗi khi viết code, có thể được phát hiện ngay khi đang coding
+    // lỗi logic, thường phát sinh trong quá trình sử dụng chức năng của ứng dụng
+    // lỗi syntax: syntax ảnh hưởng đến code thư viên, syntax ảnh hưởng đến phần của ng viết code
+    let i = 1
+    while(i++ < 10) {
+        i++
+    }
+
+    console.log(i);
+    document.getElementById("demo1").innerHTML = i
+
+    let j = 1
+    while(++j < 10) {
+        j++
+    }
+
+    // console.log(i * abc)
+    console.log(j);
+    document.getElementById("demo2").innerHTML = j
+
+    // text hiển thị bằng for
+    let data = ""
+    for (let i = 0; i < 6; i++) {
+        data += "<h2>Giá trị của i là: "  + i + "</h2>"
+    }
+    // tạo dấu cách trong html với text:search keyword HTMLEnity
+    document.getElementById("result").innerHTML = data
+</script>
+</html>

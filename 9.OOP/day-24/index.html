@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="image" multiple>
+    <button onclick="upload()">Click</button>
+    <button onclick="display()">Display</button>
+    <div id="result"></div>
+</body>
+<script>
+    let url = "image/"
+    let arr = []
+    class Demo {
+        name
+        image
+
+        constructor(name, image) {
+            this.name = name
+            this.image = image
+        }
+    }
+
+    function upload() {
+        let image = document.getElementById("image").files[0]
+        arr.push(new Demo(image.name, url + image.name))
+        console.log(document.getElementById("image").files);
+        // copy file with Javascript
+    }
+
+    function display() {
+        let data = "<table>"
+        for(let i = 0; i < arr.length; i++) {
+            data += "<tr>"
+            data += "<td>" + arr[i].name + "</td>"
+            data += "<td><img src='" + arr[i].image + "'/></td>"
+            data += "</tr>"
+        }
+        data += "</table>"
+        document.getElementById("result").innerHTML = data
+    }
+</script>
+</html>

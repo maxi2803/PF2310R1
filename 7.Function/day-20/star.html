@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="bai2(prompt('Nhập tên chòm sao bạn muốn: '))">
+    <p id="result"></p>
+</body>
+<script>
+    // cách làm này không tối ưu 
+    function bai2(star) {
+        let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"]
+        let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"]
+        let result = "Không tìm thấy"
+        for(let i = 0; i < arr1.length; i++) {
+            if (arr1[i] === star) {
+                result = arr2[i]
+                break
+            }
+        }
+        document.getElementById("result").innerHTML = result
+    }
+</script>
+</html>

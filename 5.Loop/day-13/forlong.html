@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // for lồng là 2 vòng lặp for lồng trong nhau. tương tự như câu lệnh đk, trong phần khối lệnh của for
+    // có thể chứa 1 vòng for khác hoặc bất kỳ cấu trúc code hợp pháp nào
+    // hiểu nhanh, có 1 for ở ngoài bao bọc 1 vòng for ở trong
+    // khi for ngoài chạy được 1 lần, thì for trong chạy đủ số lần của nó
+    // vd: for ngoài là 5 vòng lặp, for trong là 4 vòng lặp
+    // => thì for ngoài chạy 1, for trong chạy 4 => tổng số lần chạy của cả 2 là: 5 x 4 = 20 lần
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 7; j++) {
+            console.log("i = " + i + "; j = " + j);
+        }
+        console.log("---------------");
+    }
+</script>
+</html>

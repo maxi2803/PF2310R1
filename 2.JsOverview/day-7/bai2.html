@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="calNumber()">Clickme</button>
+    <p id="result"></p>
+</body>
+<script>
+    function calNumber() {
+        let number = Number(document.getElementById("input").value)
+        let canHai = Math.sqrt(number) // hàm sqrt của lớp Math sẽ trả về giá trị là căn 2 của số đưa vào
+        let binhPhuong = number * number // number ** 2
+        let luyThua = Math.pow(number, number) //hàm pow sẽ trả về kết quả lũy thừa theo giá trị đứa vào
+                                                // vị trí 1 là cơ số, vị trí 2 là số mũ 
+        document.getElementById("result").innerHTML = "Căn hai là: " + canHai + "; bình phương là: " + binhPhuong
+                                                    + "; lũy thừa là: " + luyThua
+    }
+</script>
+</html>

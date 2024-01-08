@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a = 5
+    var b = 10
+
+    swap1(5,10)
+    // đây là truyền tham trị, tức là truyền bản sao giá trị của biến 
+    // cho tham số của hàm
+    // việc hoàn đổi chỉ ảnh hưởng tham số, không ảnh hưởng biến thực tế 
+    function swap1(a,b) {
+        let temp = a
+        a = b 
+        b = temp
+        console.log(a);
+        console.log(b);
+    }
+
+    console.log(a);
+    console.log(b);
+    console.log("----------------");
+
+    // đây là truyền tham chiếu, tức là truyền bản sao giá trị của biến 
+    // cho tham số của hàm. khác ở trên, bản sao này là tham chiếu của biến đến giá trị của nó
+    // vậy nên đối số cũng sẽ có tham chiếu tương ứng lên giá trị của biến
+    // việc hoàn đổi tham số, sẽ làm thay đổi luôn giá trị của biến
+    // do việc hoàn đổi xảy ra trên đường dẫn tham chiếu
+    function swap2(a) {
+        let temp = a[0]
+        a[0] = a[1] 
+        a[1]  = temp
+        console.log(a[0]);
+        console.log(a[1]);
+    }
+
+    var a = [5,10]
+
+    swap2(a)
+
+    console.log(a[0]);
+    console.log(a[1]);
+    console.log("----------------")
+
+    let m = 5
+    let n = 10
+
+    console.log(m);
+    console.log(n);
+
+    swap3()
+    // đây không phải là tham trị hay tham chiếu
+    // do hàm không có tham số, thứ 2 đây đơn thuần là sử dụng biến được khai báo trước đó
+    // để thực thi câu lệnh
+    function swap3() {
+        let temp = m
+        m = n 
+        n = temp
+        console.log(m);
+        console.log(n);
+    }
+
+    console.log(m);
+    console.log(n);
+
+</script>
+</html>

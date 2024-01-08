@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">CodeGym</p>
+    <p id="demo1">CodeGym</p>
+    <button onclick="m1()">Click1</button>
+    <button onclick="m2()">Click2</button>
+</body>
+<script>
+    function m1() {
+        document.write("<h1>World</h1>")
+    }
+
+    function m2() {
+        document.getElementById("demo").innerText
+         = "<h1>Hello</h1>"
+        document.getElementById("demo1").innerHTML
+         = "<h1>Hello</h1>"
+    }
+</script>
+</html>

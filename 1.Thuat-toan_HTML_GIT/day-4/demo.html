@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        selector: là bộ chọn định tuyến cho CSS, chỉ định phần HTML mà mã CSS sẽ tác động
+        3 loại selector thường dùng nhất:
+        - tên thẻ (tagname): tên của thẻ HTML mà CSS sẽ tác động
+        - id (chỉ mục): tên của chỉ mục đang đánh dấu trên thẻ HTML muốn tác động; ký hiệu: #
+        - class (lớp): tên của lớp đang đánh dấu trên thẻ HTML muốn tác động, để tác động cùng lúc nhiều thẻ; ký hiệu: . 
+        */
+        p {
+            /* color: red; */
+        }
+
+        #p2 {
+            /* color: red; */
+        }
+
+        #h-2 {
+            color: blue;
+        }
+
+        #h-3 {
+            /* color: red; */
+        }
+
+        .maudo {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS: Cascading Style Stylesheet - ngôn ngữ định dạng thẻ HTML 
+    các key - value, nhằm hỗ trợ thay đổi hình dạng, kích thước, màu sắc của thẻ HTML  -->
+
+    <!-- 
+    - thuộc tính id: chỉ mục của thẻ, duy nhất trong trang HTML, mỗi id chỉ tồn tại 1 lần trong trang HTML 
+    - thuộc tính class: đánh dấu cho thẻ HTML; gom nhóm và đánh dấu cùng lúc trên nhiều thẻ HTML 
+    - thuộc tính name: thường sử dụng cho các thẻ để nhập liệu, như input, select,...
+    định danh cho giá trị được nhập vào thẻ HTML mà nó đang đứng
+    -->
+
+    <p>HelloWorld</p>
+    <p id="p2" class="maudo">HelloWorld1</p>
+    <p>HelloWorld2</p>
+    <h2>ByeWorld</h2>
+    <h2 id="h-2" class="maudo">ByeWorld1</h2>
+    <h2 id="h-3" class="maudo">ByeWorld2</h2>
+    <h6>Haha</h6>
+
+    <form action="#" method="post">
+        <input type="radio" name="abc" value="male"> Nam 
+        <input type="radio" name="abc" value="female"> Nữ
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

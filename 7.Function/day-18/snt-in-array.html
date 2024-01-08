@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="checkPrimeInArray()">Display</button>
+    <button onclick="display20PrimeFirst()">Display1</button>
+</body>
+<script>
+// Đề bài: Viết chương trình, tạo 1 mảng 1 chiều có 10 phần tử là số, các phần từ được nhập từ bàn phím.
+// Xác định trong các số nhập vào, số nào là số nguyên tố thì in ra màn hình.
+    // tạo hàm kiểm tra 1 số có phải SNT hay không. tham số truyền vào 1 giá trị số
+    // kết quả trả về 1 giá trị boolean tùy theo số được kiểm tra
+    function checkPrime(number) {
+        let flag = true
+        if (number < 2) {
+            flag = false
+        } else {
+            for(let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    flag = false
+                    break
+                }
+            }
+        }
+        return flag
+    }
+
+    function checkPrime1(number) {
+        if (number < 2) {
+            return false
+        }
+        for(let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false
+            }
+        }
+        return true
+    }
+
+    function createArr() {
+        let arr = new Array(10)
+        for(let i = 0; i < arr.length; i++) {
+            arr[i] = +prompt("Nhập số bất kỳ: ")
+        }
+        return arr
+    }
+
+    function checkPrimeInArray() {
+        let arr = createArr()
+        console.log(arr);
+        for(let value of arr) {
+            if (checkPrime(value)) {
+                console.log(value);
+            }
+        }
+    }
+
+    function display20PrimeFirst() {
+        let number = 2
+        let count = 1
+        while(count <= 20) {
+            // tái sử dụng hàm kiểm tra SNT để làm yêu cầu khác
+            if (checkPrime1(number)) {
+                console.log(number);
+                count++
+            }
+            number++
+        }
+    }
+</script>
+</html>

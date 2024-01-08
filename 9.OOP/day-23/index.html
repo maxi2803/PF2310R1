@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //khai báo bằng class
+    class Animal {
+        weight
+        height
+        sex
+        type 
+
+        constructor(weight, height, sex, type) {
+            this.weight = weight
+            this.height = height
+            this.sex = sex
+            this.type = type
+        }
+
+        getType() {
+            return this.type
+        }
+
+        setType(type) {
+            this.type = type
+        }
+
+        move() {
+            console.log(this.type + " có thể di chuyển");
+        }
+    }
+    //khai báo đối tượng của lớp
+    let animal1 = new Animal(2, 0.3, "male", "Cat")
+    animal1.move()
+    animal1.setType("Dog")
+    animal1.move()
+</script>
+</html>
