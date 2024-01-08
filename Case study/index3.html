@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+<div class="container">
+    <div class="headerPopup">
+        <h1>Nike Trail Zegama</h1>
+    </div>
+    <div class="contentPopup">
+        <div class="image">
+            <img src="img/nike1/1.png" alt="Nike Air Force 1 Low EasyOn">
+        </div>
+        <div class="info">
+            <h2>Giày chạy bộ cho Nam</h2>
+            <p>Màu: Trắng/Trắng/Trắng</p>
+        </div>
+    <div class="selectAndPrice">
+        <div class="selectControl">
+            <div class="select-size">
+                <p>Size:</p>
+                <select id="">
+                    <option value="">7</option>
+                    <option value="">7.5</option>
+                    <option value="">8</option>
+                    <option value="">8.5</option>
+                    <option value="">9</option>
+                    <option value="">9.5</option>
+                    <option value="">10</option>
+                </select>
+            </div>       
+            <div class="select-quantity">
+                <p>Số lượng:</p>
+                <select id="quantityShoes" onchange="selectQuantity()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+        </div>
+        <div class="price">
+            <p id="totalPrice">3.747.649 vnđ</p>
+        </div>  
+    </div>
+    <div class="footer">
+        <button>Quay lại</button>
+        <button>Thanh toán</button>
+    </div>
+</div>
+</body>
+<script>
+    function selectQuantity() {
+       
+        let select = document.getElementById("quantityShoes").value
+        let pricePerUnit = 3747649
+        let totalPrice = select * pricePerUnit
+        document.getElementById("totalPrice").innerHTML = formattedNumber = totalPrice.toLocaleString() + " vnđ";
+    }
+</script>
+</html>

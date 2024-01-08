@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        function convertCase(string) {
+        let result = "";
+        for (let i = 0; i < string.length; i++) {
+            const char = string[i];
+            if (char >= "a" && char <= "z") {
+            result += char.toUpperCase();
+            } else {
+            result += char;
+            }
+        }
+        return result;
+        }
+        function main() {
+        const input = prompt("Nhập một chuỗi: ");
+
+        const output = convertCase(input);
+
+        alert("Kết quả: " + output);
+        }
+
+        main();
+    </script>
+</html>

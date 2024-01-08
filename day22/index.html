@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Sanpham {
+        constructor(x, y, z){
+            this.ten = x;
+            this.gia = y;
+            this.sl = z;
+        }
+        
+        getI4() {
+            alert(this.ten +', '+this.gia+', '+this.sl);
+        }
+    }
+    let sp1 = new SanPham('A', 100, 10);
+    alert(sp1.ten)
+    let sp2 = new SanPham('B', 200, 15);
+    alert(sp2.gia)
+    sp2.getI4()
+</script>
+</body>
+
+</html>

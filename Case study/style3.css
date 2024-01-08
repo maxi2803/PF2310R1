@@ -1,0 +1,81 @@
+.container {
+    width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+}
+
+.headerPopup {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.headerPopup h1 {
+    font-size: 24px;
+}
+
+.contentPopup img {
+    width: 200px;
+}
+
+.info {
+    margin-left: 25px;
+}
+
+.info h2 {
+    font-size: 18px;
+}
+
+.select-size {
+display: flex;    
+}
+
+.select-size p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.info p {
+    margin-bottom: 5px;
+}
+
+.select-quantity {
+display: flex;
+}
+
+.select-quantity p {
+    padding-right: 10px;
+}
+.price {
+    float: right;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
+.selectControl {
+    display: flex;
+}
+
+.selectAndPrice {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}

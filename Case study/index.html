@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</head>
+<style>
+* {
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body {
+    width: 85%;
+    color: #000;
+    margin: 0 auto;
+    transition: 0.2s background ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 85%;
+    z-index: 99999;
+}
+
+.logo-img {
+    width: 170px;
+    height: 100px;
+    position: relative;
+    left: -20px;
+}
+
+.logo-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-item {
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+/* .nav-item:hover {
+    text-decoration: underline;
+    
+} */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    width: 40%;
+}
+
+.heading {
+    font: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.product-img {
+    transform: rotate(-20deg);
+    width: 600px;
+    height: 700px;
+    position: relative;
+    top: -50px;
+}
+
+.variants {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    z-index: 99999999;
+}
+
+.variant {
+    width: 90px;
+    height: 110px;
+    margin: 0px 10px;
+    transition: 0.2s all ease-in;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+}
+
+h4 {
+    text-align: justify;
+}
+
+.variant img {
+    width: 100%;
+    height: 100%;
+}
+
+.variant:hover {
+    position: relative;
+    top: -20px;
+    transition: 0.2s all ease-in;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.active {
+    position: relative;
+    top: -20px;
+    animation: activeProduct ease-in-out infinite 0.8s;
+}
+
+@keyframes activeProduct {
+    0% {
+        top: -20px;
+    }
+    50% {
+        top: -15px;
+    }
+    100% {
+        top: -20px;
+    }
+}
+
+a {
+    color: #000;
+}
+a:hover {
+    color: red;
+}
+
+.
+@media screen and (max-width: 600px) {
+  .nav-menu-wrapper ul li a:not(:first-child) {display: none;}
+  .nav-menu-wrapper ul li a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-menu-wrapper.responsive {position: relative;}
+  .nav-menu-wrapper.responsive ul li .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  } 
+  .nav-menu-wrapper.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+<body>
+    <nav>
+        <div class="logo-img">
+            <img src="img/logo2.png">
+        </div>
+        <div class="nav-menu-wrapper">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#">Men</a></li>
+                <li class="nav-item"><a href="#">Women</a></li>
+                <li class="nav-item"><a href="#">Kids</a></li>
+                <li class="nav-item"><a href="#">Customise</a></li>
+                <li class="nav-item"><a href="#">Sale</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header">
+        <div class="content">
+            <h1 class="heading">Nike Trail Zegama</h1>
+            <h4 class="description">
+                Khi chạy bộ trở thành thói quen hàng ngày của bạn, chúng sẽ đưa bạn trải nghiệm từng cung đường với những mục tiêu mới. Nike zoomx Zegama trail sẽ đồng hành cùng bạn với sự hỗ trợ đáng kinh ngạc.
+            </h4>
+            <div class="containerPopup">
+                <button class="btn">Mua ngay</button>
+                
+            </div>
+        </div>
+        <img src="img/nike1/1.png" class="product-img">
+    </div>
+
+    <div class="variants">
+        <div class="variant active one">
+            <img src="img/nike1/1.png" alt="">
+        </div>
+        <div class="variant two">
+            <img src="img/nike2/1.png" alt="">
+        </div>
+        <div class="variant three">
+            <img src="img/nike3/1.png" alt="">
+        </div>
+    </div>
+
+    <div class="images">
+        <img src="./img/nike1/1.png"/>
+        <img src="./img/nike1/2.png"/>
+        <img src="./img/nike1/3.png"/>
+        <img src="./img/nike1/4.png"/>
+        <img src="./img/nike1/5.png"/>
+        <img src="./img/nike1/6.png"/>
+    </div>
+    <script 
+    src="https://code.jquery.com/jquery-3.7.1.js" 
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+    crossorigin="anonymous">
+    </script>
+</body>
+<script src="main.js"></script>
+</html>

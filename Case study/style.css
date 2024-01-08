@@ -1,0 +1,164 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 85%;
+    color: #000;
+    margin: 0 auto;
+    transition: 0.2s background ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 85%;
+    z-index: 99999;
+}
+
+.logo-img {
+    width: 170px;
+    height: 100px;
+    position: relative;
+    left: -20px;
+}
+
+.logo-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-item {
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+/* .nav-item:hover {
+    text-decoration: underline;
+    
+} */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    width: 40%;
+}
+
+.heading {
+    font: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.product-img {
+    transform: rotate(-20deg);
+    width: 600px;
+    height: 700px;
+    position: relative;
+    top: -50px;
+}
+
+.variants {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    z-index: 99999999;
+}
+
+.variant {
+    width: 90px;
+    height: 110px;
+    margin: 0px 10px;
+    transition: 0.2s all ease-in;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+}
+
+h4 {
+    text-align: justify;
+}
+
+.variant img {
+    width: 100%;
+    height: 100%;
+}
+
+.variant:hover {
+    position: relative;
+    top: -20px;
+    transition: 0.2s all ease-in;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.active {
+    position: relative;
+    top: -20px;
+    animation: activeProduct ease-in-out infinite 0.8s;
+}
+
+@keyframes activeProduct {
+    0% {
+        top: -20px;
+    }
+    50% {
+        top: -15px;
+    }
+    100% {
+        top: -20px;
+    }
+}
+
+a {
+    color: #000;
+}
+a:hover {
+    color: red;
+}
